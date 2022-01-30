@@ -1,0 +1,51 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/vars.scss";
+.main {
+  display: flex;
+}
+
+.main__wrapper {
+  box-sizing: border-box;
+  width: 1046px;
+  height: 768px;
+  background-color: $white;
+  margin: 197px auto;
+  margin-top: 0px;
+  .content {
+    width: 1045px;
+    height: 280px;
+    margin-top: 80px;
+  }
+  .main__title {
+    width: 727px;
+    height: 160px;
+    left: 0px;
+    top: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 80px;
+    text-align: left;
+
+    letter-spacing: 0.2px;
+    color: $anthracite;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 35px 0px;
+  }
+}
+.main__btn {
+  display: flex;
+  gap: 10px;
+}
+
+.main__cards {
+  width: 1046px;
+  height: 248px;
+  gap: 30px;
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}

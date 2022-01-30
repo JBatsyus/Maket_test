@@ -1,0 +1,83 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/vars.scss";
+
+.contacts__btn-main {
+  height: 52px;
+  width: 155px;
+  left: 138px;
+  top: 0px;
+  border-radius: 5px;
+  padding: 15px, 40px, 15px, 40px;
+  background: $white;
+  border: 1px solid $peach;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  //styleName: btn-text;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: $peach;
+}
+.entrance__btn-main {
+  width: 128px;
+  height: 52px;
+  border-radius: 5px;
+  padding: 15px, 40px, 15px, 40px;
+  background-color: $peach;
+  border: 1px solid $peach;
+  left: 31.25%;
+  right: 31.25%;
+  top: 28.85%;
+  bottom: 28.85%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: $white;
+}
+
+.contacts__btn {
+  padding: 10px;
+  width: 95px;
+  height: 44px;
+  left: 1040px;
+  top: 18px;
+  border: 1px solid $black;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: $gray;
+}
+
+.entrance__btn {
+  width: 186px;
+  height: 40px;
+  top: 20px;
+  border: 2px solid $peach;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: $peach;
+  font-size: 20px;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 49px;
+}
