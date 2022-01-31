@@ -22,6 +22,7 @@
   letter-spacing: 0.20000000298023224px;
   text-align: center;
   color: $peach;
+  cursor: pointer;
 }
 .entrance__btn-main {
   width: 128px;
@@ -44,6 +45,7 @@
   text-align: center;
   letter-spacing: 0.2px;
   color: $white;
+  cursor: pointer;
 }
 
 .contacts__btn {
@@ -64,6 +66,7 @@
   text-align: center;
   letter-spacing: 0.2px;
   color: $gray;
+  cursor: pointer;
 }
 
 .entrance__btn {
@@ -80,4 +83,45 @@
   font-style: normal;
   font-weight: 500;
   margin-left: 49px;
+  cursor: pointer;
+}
+
+.exit__btn-user {
+  height: 52px;
+  width: 228px;
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+  padding: 15px, 40px, 15px, 40px;
+  background: $peach;
+  //styleName: btn-text;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+}
+.contacts__btn-user {
+  height: 52px;
+  width: 239px;
+  // left: 238px;
+  top: 0px;
+  padding: 15px, 40px, 15px, 40px;
+  border: 1px solid $peach;
+  box-sizing: border-box;
+  border-radius: 5px;
+  //styleName: btn-text;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: $peach;
+  cursor: pointer;
 }

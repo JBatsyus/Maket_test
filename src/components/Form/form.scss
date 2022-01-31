@@ -1,0 +1,50 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/vars.scss";
+
+.body__form {
+  margin-bottom: 5%;
+}
+.title__form {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+
+  color: $anthracite;
+}
+.input__form {
+  width: 65%;
+  outline: none;
+  border: 1px solid $gray;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.errors {
+  height: 20px;
+  color: $amaranth;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form__btn {
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 15px, 40px, 15px, 40px;
+  background-color: $peach;
+  border: 1px solid $peach;
+  left: 31.25%;
+  right: 31.25%;
+  top: 28.85%;
+  bottom: 28.85%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: $white;
+  cursor: pointer;
+}

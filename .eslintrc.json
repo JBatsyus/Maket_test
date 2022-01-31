@@ -8,16 +8,18 @@
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
     "prettier"
   ],
+
+  // "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
+
   "plugins": ["react"],
   "ignorePatterns": ["webpack.config.js"],
   "rules": {

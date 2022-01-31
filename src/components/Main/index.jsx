@@ -2,9 +2,13 @@ import "./main.scss";
 import Cards from "../Cards/Cards.jsx";
 import ContactsMain from "../Buttons/ContactsMain.jsx";
 import EntranceMain from "../Buttons/EntranceMain.jsx";
+import Modal from "../Modal/index.jsx";
+import Form from "../Form/index.jsx";
 import { datas } from "../Cards/datas.js";
+import React, { useState } from "react";
 
 const Main = () => {
+  const [modalActive, setModalActive] = useState(false);
   return (
     <main className="main">
       <div className="main__wrapper">
@@ -13,7 +17,7 @@ const Main = () => {
             Место для получения медицинской помощи
           </h1>
           <div className="main__btn">
-            <EntranceMain />
+            <EntranceMain onClick={() => setModalActive(true)} />
             <ContactsMain />
           </div>
           <div className="main__cards">
@@ -28,6 +32,9 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <Modal active={modalActive} setActive={setModalActive}>
+        <Form />
+      </Modal>
     </main>
   );
 };
