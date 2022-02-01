@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "login": "tildaOne5",
+    "name": "Тильда",
+    "password": "hgkjgdfs5544"
+  },
+  {
+    "id": 2,
+    "login": "tolstoy123",
+    "name": "Лев Толстой",
+    "password": "hgkjgdfs44"
+  },
+  {
+    "id": 3,
+    "login": "masterandmargarita",
+    "name": "Бегемот",
+    "password": "hgkjgdfs4114"
+  },
+  {
+    "id": 4,
+    "login": "sherlok007",
+    "name": "Бенедикт Кэмбербетч",
+    "password": "hgkjgdfs446"
+  },
+  {
+    "id": 5,
+    "login": "paterson15",
+    "name": "Адам Драйвер",
+    "password": "hgkjgdfs464"
+  }
+]

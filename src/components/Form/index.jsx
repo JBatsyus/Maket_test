@@ -1,7 +1,24 @@
 import "./form.scss";
-import { useForm } from "react-hook-form";
+import { useForm, useEffect } from "react-hook-form";
+import dataList from "./dataList.json";
 
 const Form = () => {
+  // const [user, setUser] = useState(dataList); //undefined
+  // // сохрание  LS, проверяет, есть ли что-то в LS
+  // useEffect(() => {
+  //   const userListMas = JSON.parse(localStorage.getItem("dataList"));
+  //   if (userListMas) {
+  //     setUser(userListMas);
+  //   }
+  // }, []);
+
+  // // сработал LS, data изменена => переписывает массив dataList
+  // useEffect(() => {
+  //   if (user) {
+  //     localStorage.setItem("dataList", JSON.stringify(user));
+  //   }
+  // }, [user]);
+
   //  с useForm не происходит перерендер на каждое нажатие клавиш(тк нет useState)
   const {
     register,
@@ -11,7 +28,7 @@ const Form = () => {
   } = useForm({
     mode: "onChange",
   });
-
+  // проверка записи в поля
   const onSubmit = data => {
     alert(JSON.stringify(data));
     reset();
