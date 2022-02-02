@@ -16,15 +16,30 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 90%;
     top: 18px;
+    @media screen and (max-width: 767px) {
+      width: 60%;
+      top: 10px;
+    }
+    @media screen and (max-width: 901px) {
+      width: 80%;
+      top: 10px;
+    }
+  }
+  .header__btn {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-end;
+    }
   }
   .header__logo {
     margin-top: 23px;
     margin-left: 54px;
     margin-bottom: 31px;
+    @media screen and (max-width: 767px) {
+      margin-left: 15px;
+    }
   }
-}
-.header__btn {
-  margin-left: 915px;
 }

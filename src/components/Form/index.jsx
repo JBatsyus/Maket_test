@@ -1,23 +1,31 @@
 import "./form.scss";
-import { useForm, useEffect } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import dataList from "./dataList.json";
+import { useState, useEffect } from "react";
 
 const Form = () => {
-  // const [user, setUser] = useState(dataList); //undefined
-  // // сохрание  LS, проверяет, есть ли что-то в LS
-  // useEffect(() => {
-  //   const userListMas = JSON.parse(localStorage.getItem("dataList"));
-  //   if (userListMas) {
-  //     setUser(userListMas);
-  //   }
-  // }, []);
+  const [login, setLogin] = useState();
+  const [password, setPassword] = useState();
+  const [userLogin, setsetUserLogin] = useState(false); //результат авторизации ( пока в console.log)
 
-  // // сработал LS, data изменена => переписывает массив dataList
-  // useEffect(() => {
-  //   if (user) {
-  //     localStorage.setItem("dataList", JSON.stringify(user));
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    const userObj = JSON.parse(localStorage.getItem("user"));
+    if (userLogin) {
+      dataList.filter(users => {
+        if (users.login === userObj.login) {
+          console.log(users.name);
+        }
+      });
+    }
+  }, [userLogin]);
+
+  const changeLogin = event => {
+    setLogin(event.target.value);
+  };
+
+  const changePassword = event => {
+    setPassword(event.target.value);
+  };
 
   //  с useForm не происходит перерендер на каждое нажатие клавиш(тк нет useState)
   const {
@@ -26,12 +34,13 @@ const Form = () => {
     handleSubmit,
     reset,
   } = useForm({
-    mode: "onChange",
+    mode: "onBlur",
   });
   // проверка записи в поля
   const onSubmit = data => {
-    alert(JSON.stringify(data));
-    reset();
+    localStorage.setItem("user", JSON.stringify(data));
+    setsetUserLogin(true);
+    reset(); //перестал  функционировать после функции записи в ls
   };
 
   return (
@@ -49,6 +58,8 @@ const Form = () => {
               message: "Минимум 8 символов.",
             },
           })}
+          onChange={changeLogin}
+          value={login}
         />
 
         <div className="errors">
@@ -71,6 +82,8 @@ const Form = () => {
               message: "Буквы латинского алфавита и цифры",
             },
           })}
+          value={password}
+          onChange={changePassword}
         />
 
         <div className="errors">

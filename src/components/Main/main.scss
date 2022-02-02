@@ -2,6 +2,9 @@
 @import "../../assets/styles/vars.scss";
 .main {
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .main__wrapper {
@@ -11,10 +14,18 @@
   background-color: $white;
   margin: 197px auto;
   margin-top: 0px;
+  @media screen and (max-width: 767px) {
+    width: 80%;
+    padding-top: 30px;
+  }
   .content {
     width: 1045px;
     height: 280px;
     margin-top: 80px;
+    @media screen and (max-width: 767px) {
+      width: 80%;
+      margin-top: 30px;
+    }
   }
   .main__title {
     width: 727px;
@@ -33,6 +44,12 @@
     order: 0;
     flex-grow: 0;
     margin: 35px 0px;
+
+    @media screen and (max-width: 901px) {
+      text-align: center;
+      margin: auto;
+      line-height: normal;
+    }
   }
 }
 .main__btn {
@@ -47,4 +64,12 @@
   display: flex;
   margin-top: 80px;
   margin-bottom: 80px;
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
 }

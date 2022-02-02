@@ -67,6 +67,10 @@
   letter-spacing: 0.2px;
   color: $gray;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    border: none;
+    box-shadow: none;
+  }
 }
 
 .entrance__btn {
@@ -84,6 +88,10 @@
   font-weight: 500;
   margin-left: 49px;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    margin-left: 5px;
+    width: 140px;
+  }
 }
 
 .exit__btn-user {
