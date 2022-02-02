@@ -2,6 +2,7 @@ import "./form.scss";
 import { useForm } from "react-hook-form";
 import dataList from "./dataList.json";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const [login, setLogin] = useState();
@@ -89,10 +90,11 @@ const Form = () => {
         <div className="errors">
           {errors?.password && <p>{errors?.password?.message || "Error!"}</p>}
         </div>
-
-        <button className="form__btn" type="submit" disadbled={!isValid}>
-          Войти
-        </button>
+        <Link to="/user">
+          <button className="form__btn" type="submit" disadbled={!isValid}>
+            Войти
+          </button>
+        </Link>
       </form>
     </div>
   );
