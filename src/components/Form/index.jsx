@@ -45,7 +45,7 @@ const Form = () => {
 
   return (
     <div className="body__form">
-      <h2 className="title__form">Регистрация</h2>
+      <h2 className="title__form">Авторизация</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input__form"
