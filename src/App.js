@@ -16,6 +16,9 @@ function App() {
           <Route exact path="/user">
             <User />
           </Route>
+          <Route exact path="/">
+            <Main />
+          </Route>
         </Switch>
       </div>
     </Router>
