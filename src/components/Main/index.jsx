@@ -6,13 +6,14 @@ import Modal from "../Modal/index.jsx";
 import Form from "../Form/index.jsx";
 import Header from "../Header/index.jsx";
 import { datas } from "../Cards/datas.js";
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 const Main = () => {
   const [modalActive, setModalActive] = useState(false);
   return (
     <main className="main">
-      <Header/>
+      <Header />
       <div className="main__wrapper">
         <div className="content">
           <h1 className="main__title">
@@ -20,7 +21,9 @@ const Main = () => {
           </h1>
           <div className="main__btn">
             <EntranceMain onClick={() => setModalActive(true)} />
-            <ContactsMain />
+            <Link to="/contacts">
+              <ContactsMain />
+            </Link>
           </div>
           <div className="main__cards">
             {datas.map(data => (

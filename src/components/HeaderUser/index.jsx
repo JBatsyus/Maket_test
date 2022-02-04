@@ -2,13 +2,20 @@ import logo from "../../assets/images/logo.png";
 import "./headerUser.scss";
 import ContactsHeaderUser from "../Buttons/ContactsHeaderUser.jsx";
 import ExitHeaderUser from "../Buttons/ExitHeaderUser.jsx";
+import { Link } from "react-router-dom";
+
 const HeaderUser = () => {
   return (
     <header className="headerUser">
       <div className="header__wrapperUser">
-        <img className="header__logoUser" src={logo} alt={"логотип"} />
+        <Link to="/home">
+          <img className="header__logoUser" src={logo} alt={"логотип"} />
+        </Link>
+
         <div className="header__btnUser">
-          <ContactsHeaderUser />
+          <Link to="/contacts">
+            <ContactsHeaderUser />
+          </Link>
           <ExitHeaderUser />
         </div>
       </div>
