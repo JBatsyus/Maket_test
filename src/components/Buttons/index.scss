@@ -52,7 +52,8 @@
   padding: 10px;
   width: 95px;
   height: 44px;
-  left: 1040px;
+  // left: 1040px;
+
   top: 18px;
   border: 1px solid $black;
   background: #ffffff;
@@ -67,7 +68,7 @@
   letter-spacing: 0.2px;
   color: $gray;
   cursor: pointer;
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     border: none;
     box-shadow: none;
   }
@@ -131,5 +132,40 @@
   letter-spacing: 0.20000000298023224px;
   text-align: center;
   color: $peach;
+  cursor: pointer;
+}
+.contacts__btnUser {
+  padding: 10px;
+  width: 95px;
+  height: 44px;
+
+  top: 18px;
+  border: none;
+  background: #ffffff;
+  box-sizing: border-box;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: $gray;
+  cursor: pointer;
+}
+.entrance__btnUser {
+  width: 186px;
+  height: 40px;
+  top: 20px;
+  border: 2px solid $peach;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: $peach;
+  font-size: 20px;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 49px;
   cursor: pointer;
 }

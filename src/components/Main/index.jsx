@@ -4,6 +4,7 @@ import ContactsMain from "../Buttons/ContactsMain.jsx";
 import EntranceMain from "../Buttons/EntranceMain.jsx";
 import Modal from "../Modal/index.jsx";
 import Form from "../Form/index.jsx";
+import Header from "../Header/index.jsx";
 import { datas } from "../Cards/datas.js";
 import React, { useState } from "react";
 
@@ -11,6 +12,7 @@ const Main = () => {
   const [modalActive, setModalActive] = useState(false);
   return (
     <main className="main">
+      <Header/>
       <div className="main__wrapper">
         <div className="content">
           <h1 className="main__title">

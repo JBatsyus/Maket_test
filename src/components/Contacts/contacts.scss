@@ -1,7 +1,7 @@
 @import "../../assets/styles/fonts.scss";
 @import "../../assets/styles/vars.scss";
 
-.box {
+.box__contacts {
   box-sizing: border-box;
   width: 1046px;
   height: 440px;
@@ -14,22 +14,22 @@
     padding: 20px;
     margin: 0 auto;
   }
+}
 
-  .content__user {
-    height: 158px;
-    width: 800px;
-    padding-left: 117px;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-      width: 80%;
-      margin-top: 50px;
-    }
+.content__contacts {
+  height: 158px;
+  width: 800px;
+  padding-left: 117px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 80%;
+    margin-top: 50px;
   }
 }
-.user__title {
+.contacts__title {
   font-family: "Montserrat", sans-serif;
   font-size: 58px;
   font-style: normal;
@@ -38,26 +38,10 @@
   letter-spacing: 0.20000000298023224px;
   text-align: left;
   color: $anthracite;
+  margin-top: 85px;
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     font-size: 50px;
     text-align: left;
-
     line-height: normal;
-  }
-}
-.user__btn {
-  height: 52px;
-  width: 477px;
-  left: 0px;
-  margin-top: -13px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
   }
 }

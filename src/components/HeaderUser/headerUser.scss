@@ -1,16 +1,17 @@
 @import "../../assets/styles/fonts.scss";
 @import "../../assets/styles/vars.scss";
 
-.header {
+.headerUser {
   flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
   height: 79px;
   width: 100%;
+
   background-color: white;
   border-bottom: 1px solid black;
 
-  .header__wrapper {
+  .header__wrapperUser {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,17 +19,17 @@
     width: 90%;
     top: 18px;
   }
-  .header__btn {
-    padding-right: 15px;
+  .header__btnUser {
+    padding-right: 24px;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       display: flex;
       flex-direction: row;
       justify-items: flex-end;
     }
   }
-  .header__logo {
-    margin-top: 23px;
-    margin-left: 182px;
+  .header__logoUser {
+    margin-top: 25px;
+    margin-left: 190px;
     margin-bottom: 22px;
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       margin-left: 5%;

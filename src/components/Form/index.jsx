@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Form = () => {
-  const [login, setLogin] = useState();
-  const [password, setPassword] = useState();
+  // const [login, setLogin] = useState();
+  // const [password, setPassword] = useState();
   const [userLogin, setsetUserLogin] = useState(false); //результат авторизации ( пока в console.log)
 
   useEffect(() => {
@@ -20,13 +20,13 @@ const Form = () => {
     }
   }, [userLogin]);
 
-  const changeLogin = event => {
-    setLogin(event.target.value);
-  };
+  // const changeLogin = event => {
+  //   setLogin(event.target.value);
+  // };
 
-  const changePassword = event => {
-    setPassword(event.target.value);
-  };
+  // const changePassword = event => {
+  //   setPassword(event.target.value);
+  // };
 
   //  с useForm не происходит перерендер на каждое нажатие клавиш(тк нет useState)
   const {
@@ -39,7 +39,8 @@ const Form = () => {
   });
   // проверка записи в поля
   const onSubmit = data => {
-    localStorage.setItem("user", JSON.stringify(data));
+    console.log(data);
+    // localStorage.setItem("user", JSON.stringify(data));
     setsetUserLogin(true);
     reset(); //перестал  функционировать после функции записи в ls
   };
@@ -59,8 +60,8 @@ const Form = () => {
               message: "Минимум 8 символов.",
             },
           })}
-          onChange={changeLogin}
-          value={login}
+          // onChange={changeLogin}
+          // value={login}
         />
 
         <div className="errors">
@@ -83,8 +84,8 @@ const Form = () => {
               message: "Буквы латинского алфавита и цифры",
             },
           })}
-          value={password}
-          onChange={changePassword}
+          // value={password}
+          // onChange={changePassword}
         />
 
         <div className="errors">
