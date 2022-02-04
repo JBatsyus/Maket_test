@@ -1,32 +1,32 @@
 import "./form.scss";
 import { useForm } from "react-hook-form";
-import dataList from "./dataList.json";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import dataList from "./dataList.json";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
-  // const [login, setLogin] = useState();
-  // const [password, setPassword] = useState();
-  const [userLogin, setsetUserLogin] = useState(false); //результат авторизации ( пока в console.log)
+  const [login, setLogin] = useState("sherlok007");
+  const [password, setPassword] = useState("123456789");
+  // const [userLogin, setsetUserLogin] = useState(false); //результат авторизации ( пока в console.log)
+  const history = useHistory();
+  // useEffect(() => {
+  //   const userObj = JSON.parse(localStorage.getItem("user"));
+  //   if (userLogin) {
+  //     dataList.filter(users => {
+  //       if (users.login === userObj.login) {
+  //         console.log(users.name);
+  //       }
+  //     });
+  //   }
+  // }, [userLogin]);
 
-  useEffect(() => {
-    const userObj = JSON.parse(localStorage.getItem("user"));
-    if (userLogin) {
-      dataList.filter(users => {
-        if (users.login === userObj.login) {
-          console.log(users.name);
-        }
-      });
-    }
-  }, [userLogin]);
+  const changeLogin = event => {
+    setLogin(event.target.value);
+  };
 
-  // const changeLogin = event => {
-  //   setLogin(event.target.value);
-  // };
-
-  // const changePassword = event => {
-  //   setPassword(event.target.value);
-  // };
+  const changePassword = event => {
+    setPassword(event.target.value);
+  };
 
   //  с useForm не происходит перерендер на каждое нажатие клавиш(тк нет useState)
   const {
@@ -40,9 +40,16 @@ const Form = () => {
   // проверка записи в поля
   const onSubmit = data => {
     console.log(data);
-    // localStorage.setItem("user", JSON.stringify(data));
-    setsetUserLogin(true);
-    reset(); //перестал  функционировать после функции записи в ls
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        ...data,
+        name: "Бенедикт",
+      }),
+    );
+    // setsetUserLogin(true);
+    reset();
+    history.push("/user");
   };
 
   return (
@@ -60,8 +67,8 @@ const Form = () => {
               message: "Минимум 8 символов.",
             },
           })}
-          // onChange={changeLogin}
-          // value={login}
+          onChange={changeLogin}
+          value={login}
         />
 
         <div className="errors">
@@ -84,18 +91,16 @@ const Form = () => {
               message: "Буквы латинского алфавита и цифры",
             },
           })}
-          // value={password}
-          // onChange={changePassword}
+          value={password}
+          onChange={changePassword}
         />
 
         <div className="errors">
           {errors?.password && <p>{errors?.password?.message || "Error!"}</p>}
         </div>
-        <Link to="/user">
-          <button className="form__btn" type="submit" disadbled={!isValid}>
-            Войти
-          </button>
-        </Link>
+        <button className="form__btn" type="submit" disadbled={!isValid}>
+          Войти
+        </button>
       </form>
     </div>
   );

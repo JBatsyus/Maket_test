@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import ContactsUser from "../Buttons/ContactsUser.jsx";
 import ExitUser from "../Buttons/ExitUser.jsx";
 
-const User = props => {
-  const { name } = props;
+const User = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const name = user.name;
   return (
     <div>
       <HeaderUser />
