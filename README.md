@@ -31,7 +31,7 @@ _Тестовая задача_.
     ноутбуки
   - @media screen and (min-width:481px) and (max-width:768px)
     планшеты
-  - @media screen and (min-width:320px) and (max-width:480px)
+  - @media screen and (min-width:320px) and (max-width:480px
     мобильные устройства)
 
 #### Запуск приложения:
