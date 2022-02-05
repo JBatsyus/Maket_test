@@ -52,7 +52,6 @@
   padding: 10px;
   width: 95px;
   height: 44px;
-  // left: 1040px;
 
   top: 18px;
   border: 1px solid $black;
@@ -69,6 +68,10 @@
   color: $gray;
   cursor: pointer;
   @media screen and (min-width: 768px) and (max-width: 1023px) {
+    border: none;
+    box-shadow: none;
+  }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
     border: none;
     box-shadow: none;
   }
@@ -93,9 +96,8 @@
   font-weight: 500;
   margin-left: 49px;
   cursor: pointer;
-  @media screen and (max-width: 767px) {
-    margin-left: 5px;
-    width: 140px;
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    margin-left: 1%;
   }
 }
 
@@ -107,7 +109,7 @@
   border-radius: 5px;
   padding: 15px, 40px, 15px, 40px;
   background: $peach;
-  //styleName: btn-text;
+
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -127,7 +129,7 @@
   border: 1px solid $peach;
   box-sizing: border-box;
   border-radius: 5px;
-  //styleName: btn-text;
+
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-style: normal;

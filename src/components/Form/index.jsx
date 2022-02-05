@@ -98,7 +98,7 @@ const Form = () => {
         <div className="errors">
           {errors?.password && <p>{errors?.password?.message || "Error!"}</p>}
         </div>
-        <button className="form__btn" type="submit" disadbled={!isValid}>
+        <button className="form__btn" type="submit" disabled={!isValid}>
           Войти
         </button>
       </form>
