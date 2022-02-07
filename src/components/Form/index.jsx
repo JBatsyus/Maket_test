@@ -7,28 +7,16 @@ import { useHistory } from "react-router-dom";
 const Form = () => {
   const [login, setLogin] = useState("sherlok007");
   const [password, setPassword] = useState("123456789");
-  // const [userLogin, setsetUserLogin] = useState(false); //результат авторизации ( пока в console.log)
+
   const history = useHistory();
-  // useEffect(() => {
-  //   const userObj = JSON.parse(localStorage.getItem("user"));
-  //   if (userLogin) {
-  //     dataList.filter(users => {
-  //       if (users.login === userObj.login) {
-  //         console.log(users.name);
-  //       }
-  //     });
-  //   }
-  // }, [userLogin]);
 
   const changeLogin = event => {
     setLogin(event.target.value);
   };
-
   const changePassword = event => {
     setPassword(event.target.value);
   };
 
-  //  с useForm не происходит перерендер на каждое нажатие клавиш(тк нет useState)
   const {
     register,
     formState: { errors, isValid },
@@ -37,7 +25,7 @@ const Form = () => {
   } = useForm({
     mode: "onBlur",
   });
-  // проверка записи в поля
+
   const onSubmit = data => {
     console.log(data);
     localStorage.setItem(
@@ -47,7 +35,7 @@ const Form = () => {
         name: "Бенедикт",
       }),
     );
-    // setsetUserLogin(true);
+
     reset();
     history.push("/user");
   };
