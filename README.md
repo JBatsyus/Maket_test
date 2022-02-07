@@ -27,17 +27,18 @@ _Тестовая задача_.
 - Pixel Perfect
 - React Router
 - Адаптив:
-  - @media screen and (min-width:481px) and (max-width:768px)
+  - @media screen and (min-width:768px) and (max-width:1023px)
     ноутбуки
   - @media screen and (min-width:481px) and (max-width:768px)
     планшеты
-  - @media screen and (min-width:320px) and (max-width:480px
-    мобильные устройства)
+  - @media screen and (min-width:320px) and (max-width:480px)
+    мобильные устройства
 
 #### Запуск приложения:
 
 ```
 git clone https://github.com/JBatsyus/Maket_test.git
+cd Maket_test
 npm install
 npm start
 ```
